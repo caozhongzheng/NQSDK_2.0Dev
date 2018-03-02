@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <!-- <ImageView
+        android:id="@+id/iv_loading_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@anim/nq_anim_loading"
+        android:contentDescription="@null"
+        android:visibility="gone" /> -->
+
+    <include layout="@layout/nq_move_back"
+        android:layout_gravity="center"/>
+    
+    <LinearLayout
+        android:id="@+id/ll_load_failed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nq_white"
+        android:gravity="center"
+        android:visibility="gone"
+        android:paddingTop="@dimen/nq_load_failure_top"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_nonetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/nq_no_network"
+            android:contentDescription="@null"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/iv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nq_no_network"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:visibility="gone" />
+        
+        <TextView
+            android:id="@+id/iv_empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/nq_black"
+            android:contentDescription="@null"
+            android:text="@null"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/click_to_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:singleLine="true"
+            android:text="@string/nq_tap_load"
+            android:textSize="14sp" />
+    </LinearLayout>
+    
+</FrameLayout>

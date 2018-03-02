@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:background="@drawable/nq_listview_bg_x"
+        android:descendantFocusability="blocksDescendants">
+
+    <com.nqmobile.livesdk.commons.ui.AsyncImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/nq_icon_default"/>
+
+    <LinearLayout
+            android:id="@+id/rl_mid"
+            android:layout_width="wrap_content"
+            android:layout_height="78dp"
+            android:layout_toRightOf="@id/iv_icon"
+            android:gravity="center_vertical"
+            android:layout_toLeftOf="@+id/iv_divider_vertical"
+            android:orientation="vertical"
+            android:paddingRight="2dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.0">
+
+            <LinearLayout
+                    android:id="@+id/name_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="@dimen/nq_download_name_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textSize="16sp"
+                        android:textColor="#585858"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                <TextView
+                        android:id="@+id/tv_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:textColor="#6b6b6b"
+                        android:maxLines="1"
+                        android:ellipsize="none"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/cancle_layout"
+                    android:layout_width="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="40dp"
+                    android:gravity="center">
+
+                <ImageView
+                        android:id="@+id/btn_cancle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/nq_download_cancle"
+                        />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ProgressBar
+                android:id="@+id/progress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="@dimen/nq_download_progress_width"
+                android:layout_marginBottom="10dp"
+                android:layout_height="7dp"
+                android:max="100"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/nq_download_progress_layer"
+                />
+
+    </LinearLayout>
+
+    <ImageView
+            android:id="@id/iv_divider_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="78dp"
+            android:layout_toLeftOf="@+id/iv_download"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:src="@drawable/nq_listview_divider_vertical_line"
+            android:scaleType="center"
+            android:focusable="false"/>
+
+    <ImageView
+            android:id="@id/iv_download"
+            android:layout_width="80dp"
+            android:layout_height="78dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:src="@drawable/nq_download_download_icon"
+            android:scaleType="center"
+            android:focusable="false"
+            android:clickable="true"/>
+</RelativeLayout>

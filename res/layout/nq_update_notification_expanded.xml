@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="190dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/notification_expanded_big_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom"
+        android:background="@color/nq_black"
+        android:contentDescription="@null"
+        android:orientation="horizontal" 
+        android:scaleType="centerCrop" />
+    
+        <ImageView
+            android:id="@+id/update_notification_image"
+            android:src="@drawable/nq_download_notfi_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingLeft="5dip"
+            android:paddingTop="10dip"
+            android:contentDescription="@null" />    
+        
+        <TextView            
+            android:id="@+id/update_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/nq_white"
+            android:paddingLeft="72dip"
+            android:paddingTop="10dip"
+            android:textSize="22sp" />
+        
+        <TextView            
+            android:id="@+id/update_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/nq_white"
+            android:paddingLeft="72dip"
+            android:paddingTop="40dip"
+            android:lineSpacingExtra="8dp"
+            android:textSize="15sp" />
+        
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/nq_black"
+        android:orientation="vertical" >
+
+
+        <FrameLayout
+            android:id="@+id/expanded_notification_seperator_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/nq_push_notification_expanded_seperator_color" />
+
+        <LinearLayout
+            android:id="@+id/expanded_notification_actions"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/nq_notification_button_color"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="2dp" >
+
+                <LinearLayout
+                    android:id="@+id/notification_expanded_unlike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/notification_expanded_unlike_imageview"
+                        android:src="@drawable/nq_notification_expanded_notupdate_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        android:id="@+id/notification_expanded_unlike_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/nq_white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/nq_push_notification_expanded_seperator_color"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/nq_notification_button_color"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="2dp" >
+
+                <LinearLayout
+                    android:id="@+id/notification_expanded_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/notification_expanded_download_imageview"
+                        android:src="@drawable/nq_notification_expanded_download_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        android:id="@+id/notification_expanded_download_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/nq_white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

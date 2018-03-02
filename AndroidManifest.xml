@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nqmobile.live"
+    android:versionCode="1"
+    android:versionName="1.1.02.00" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="16" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true" />
+
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.vlife.wallpaper.permission.INSTALL_APICALL"/>
+    <uses-permission android:name="com.vlife.wallpaper.permission.INSTALL_APIRESPONSE"/>
+
+    <permission
+        android:name="com.nqmobile.live.permission.ACCESS_DOWNLOAD_MANAGER"
+        android:description="@string/permdesc_downloadManager"
+        android:label="@string/permlab_downloadManager"
+        android:protectionLevel="normal" />
+    <permission
+            android:name="com.nqmobile.live.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED"
+            android:description="@string/permdesc_downloadManagerAdvanced"
+            android:label="@string/permlab_downloadManagerAdvanced"
+            android:protectionLevel="normal" />
+    <permission
+            android:name="com.nqmobile.live.permission.SEND_DOWNLOAD_COMPLETED_INTENTS"
+            android:description="@string/permdesc_downloadCompletedIntent"
+            android:label="@string/permlab_downloadCompletedIntent"
+            android:protectionLevel="normal" />
+    <uses-permission android:name="com.nqmobile.live.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="com.nqmobile.live.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED" />
+    <uses-permission android:name="com.nqmobile.live.permission.SEND_DOWNLOAD_COMPLETED_INTENTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/nq_icon_default"
+        android:label="@string/nq_app_name"
+        android:name="com.nqmobile.livesdk.commons.info.NqTestApplication"
+        android:process="com.lqsoft.launcher"
+        android:largeHeap="true" >
+
+        <meta-data
+                android:name="com.amap.api.v2.apikey"
+                android:value="0fe19a92ad7f52e2382bd01699a70653" />
+
+        <activity
+            android:name="com.nqmobile.livesdk.commons.ui.StoreMainActivity"
+            android:process="com.nqmobile.live"
+            android:launchMode="singleTask"
+            android:theme="@style/activityLaunchTheme" >
+            <intent-filter>
+                <action android:name="com.nqmobile.live.StoreMain" />
+                <!-- Monkey Test Begin -->
+                <category android:name="android.intent.category.LAUNCHER" />
+				<action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.MONKEY" />
+                <!-- Monkey Test End -->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.nqmobile.live.store.ui.StoreMainActivity"
+                android:process="com.nqmobile.live"
+                android:launchMode="singleTask"
+                android:theme="@style/activityLaunchTheme" >
+            <intent-filter>
+                <action android:name="com.nqmobile.live.StoreMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.nqmobile.livesdk.modules.app.AppDetailActivity"
+            android:process="com.nqmobile.live"
+            android:theme="@style/activityLaunchTheme" >
+            <intent-filter>
+                <action android:name="com.nqmobile.live.AppDetail" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nqmobile.livesdk.modules.theme.ThemeDetailActivity"
+            android:process="com.nqmobile.live"
+            android:theme="@style/activityLaunchTheme" >
+            <intent-filter>
+                <action android:name="com.nqmobile.live.ThemeDetail" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nqmobile.livesdk.modules.wallpaper.WallpaperDetailActivity"
+            android:process="com.nqmobile.live"
+            android:launchMode="singleTask"
+            android:theme="@style/activityLaunchTheme" >
+            <intent-filter>
+                <action android:name="com.nqmobile.live.WallpaperDetail" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nqmobile.livesdk.modules.locker.LockerDetailActivity"
+            android:process="com.nqmobile.live"
+            android:theme="@style/activityLaunchTheme" >
+            <intent-filter>
+                <action android:name="com.nqmobile.live.LockerDetail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nqmobile.livesdk.modules.appstub.AppStubDetailActivity"
+            android:process="com.nqmobile.live"
+            android:exported="true"
+            
+            android:theme="@style/translucent"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.nqmobile.live.appstub"
+             >
+            <intent-filter>
+                <action android:name="com.nqmobile.live.AppStubDetail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.nqmobile.live.store.ui.AppStubDetailActivity"
+                android:process="com.nqmobile.live"
+                android:exported="true"
+                
+                android:theme="@style/translucent"
+                android:launchMode="singleTask"
+                android:taskAffinity="com.nqmobile.live.appstub"
+                >
+            <intent-filter>
+                <action android:name="com.nqmobile.live.AppStubDetail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nqmobile.livesdk.modules.appstub.NetworkAlertActivity"
+            android:process="com.nqmobile.live"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucent" >
+            <intent-filter>
+                <action android:name="com.nqmobile.live.NetworkAlert" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nqmobile.livesdk.commons.ui.PreviewActivity"
+            android:process="com.nqmobile.live"
+                android:theme="@style/activityLaunchTheme"/>
+        <activity
+                android:name="com.nqmobile.livesdk.modules.daily.WebActivity"
+                android:process="com.nqmobile.live" />
+        <activity
+                android:name="com.nqmobile.livesdk.modules.locker.LockerUpgradeActivity"
+                android:process="com.nqmobile.live"
+                android:exported="true"
+                android:screenOrientation="portrait"
+                android:theme="@style/translucent"  />
+        <activity
+                android:name="com.nqmobile.livesdk.modules.locker.LockerApplyActivity"
+                android:process="com.nqmobile.live"
+                android:exported="true"
+                android:screenOrientation="portrait"
+                android:theme="@style/translucent"  />
+        <activity android:name="com.nqmobile.livesdk.modules.feedback.FeedBackActivity" >
+            <intent-filter>
+                 <action android:name="com.nqmobile.live.feedback"/>
+                 <category android:name="android.intent.category.DEFAULT" />
+             </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lqsoft.launcherframework.defaultlayout.CheckUpdateShortcutActivity" >
+            <intent-filter>
+                 <action android:name="com.nqmobile.livesdk.checkupdateshortcut"/>
+                 <category android:name="android.intent.category.DEFAULT" />
+             </intent-filter>
+        </activity>        
+        <activity android:name="com.nqmobile.livesdk.modules.mustinstall.MustInstallActivity"
+                  
+                  android:theme="@style/activityLaunchTheme"
+                  >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.nqmobile.live.store.ui.MustInstallActivity"
+                  
+                  android:theme="@style/activityLaunchTheme"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.nqmobile.livesdk.modules.points.PointsCenterActivity"
+                  android:exported="true"
+                  android:screenOrientation="portrait"
+                  android:process="com.nqmobile.live" />
+        <activity android:name="com.nqmobile.livesdk.modules.points.ConsumeListActivity"
+                  android:screenOrientation="portrait"
+                  android:process="com.nqmobile.live" />
+        <activity android:name="com.nqmobile.livesdk.modules.points.PointOpenNoitifiAppACT"
+                  android:screenOrientation="portrait"
+                  android:process="com.nqmobile.live" />
+        <activity android:name="com.nqmobile.livesdk.modules.theme.TopicDetailACT"
+                  android:screenOrientation="portrait"
+                  android:process="com.nqmobile.live" />
+        <activity android:name="com.nqmobile.livesdk.commons.mydownloadmanager.DownloadActivity"
+
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_LIST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.nqmobile.livesdk.modules.installedrecommend.InstalledRecommendActivity"
+                         android:launchMode="singleTask"
+                 android:exported="true" />
+         <activity 
+            android:name="com.nqmobile.livesdk.modules.installedrecommend.InstalledRecommendDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+
+            android:theme="@style/translucent" />
+        <service android:name="com.nqmobile.livesdk.commons.service.BackgroundService" />
+
+        <provider
+            android:name="com.nqmobile.livesdk.commons.db.DataProvider"
+            android:authorities="com.lqsoft.launcher3.dataprovider"
+            android:process="com.nqmobile.live.provider"
+            android:exported="false" />
+
+        <receiver android:name="com.nqmobile.livesdk.commons.receiver.DownloadReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.nqmobile.live.download.push" />
+                <action android:name="com.nqmobile.live.click.push" />
+                <action android:name="com.nqmobile.live.unlike.push" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+                android:name="com.nqmobile.livesdk.commons.downloadmanager.DownloadProvider"
+                android:authorities="com.lqsoft.launcher3.download"
+                android:process="com.nqmobile.live.provider"
+                android:exported="true"/>
+        <service android:name="com.nqmobile.livesdk.commons.downloadmanager.DownloadService"
+            android:process="com.nqmobile.live.provider"/>	
+        <receiver
+            android:name="com.nqmobile.livesdk.commons.downloadmanager.DownloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.nqmobile.livesdk.modules.apprate.AppRateActivity"
+            android:theme="@style/Translucent_NoTitle" >
+        </activity>
+
+    </application>
+
+</manifest>

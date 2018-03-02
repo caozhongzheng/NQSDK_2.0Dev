@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_preview"
+    style="@style/nq_store_detail_image" >
+
+    <com.nqmobile.livesdk.commons.ui.AsyncImageView
+        android:id="@+id/iv_preview"
+        android:layout_width="240dp"
+        android:layout_height="@dimen/nq_theme_virepage_item_height"
+        android:adjustViewBounds="true"
+        android:maxHeight="@dimen/nq_theme_virepage_item_height"
+        android:maxWidth="240dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/nq_load_default" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="@android:style/Widget.ProgressBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center" />
+
+</RelativeLayout>

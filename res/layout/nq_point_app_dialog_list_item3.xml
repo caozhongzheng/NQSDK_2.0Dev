@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/nq_point_list_dialog_item0"
+        layout="@layout/nq_point_app_dialog_list_item" />
+
+    <!-- <View
+        android:id="@+id/v_line1"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#d3d3d3" /> -->
+
+    <include
+        android:id="@+id/nq_point_list_dialog_item1"
+        layout="@layout/nq_point_app_dialog_list_item" />
+
+    <!-- <View
+        android:id="@+id/v_line2"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#d3d3d3" /> -->
+
+    <include
+        android:id="@+id/nq_point_list_dialog_item2"
+        layout="@layout/nq_point_app_dialog_list_item" />
+
+</LinearLayout>

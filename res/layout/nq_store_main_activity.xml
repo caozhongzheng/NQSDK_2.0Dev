@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <fragment
+        android:id="@+id/fragement_application"
+        android:name="com.nqmobile.livesdk.modules.app.FragmentApp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10" />
+
+    <fragment
+        android:id="@+id/fragement_theme"
+        android:name="com.nqmobile.livesdk.modules.theme.FragmentTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10" />
+
+    <fragment
+        android:id="@+id/fragement_wallpaper"
+        android:name="com.nqmobile.livesdk.modules.wallpaper.FragmentWallpaper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10" />
+
+    <fragment
+        android:id="@+id/fragement_font"
+        android:name="com.nqmobile.livesdk.modules.font.FragmentFont"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10" />
+
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@drawable/nq_tab_bar" >
+
+        <RelativeLayout
+            android:id="@+id/tab_tip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/image_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/nq_app_normal" />
+
+                <TextView
+                    android:id="@+id/text_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/nq_store_tips"
+                    android:textColor="@color/nq_store_tab_text_sel"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_one"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/nq_select_line_two"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/nq_tab_bar_line" />
+
+        <RelativeLayout
+            android:id="@+id/tab_theme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/image_theme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/nq_theme_normal" />
+
+                <TextView
+                    android:id="@+id/text_theme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/nq_store_themes"
+                    android:textColor="@color/nq_store_tab_text_sel"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_two"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/nq_select_line_two"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/nq_tab_bar_line" />
+
+        <RelativeLayout
+            android:id="@+id/tab_wallpaper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/image_wallpaper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/nq_wallpaper_normal" />
+
+                <TextView
+                    android:id="@+id/text_wallpaper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ellipsize="none"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/nq_store_wallpapers"
+                    android:textColor="@color/nq_store_tab_text_sel"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_three"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/nq_select_line_two"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/nq_tab_bar_line" />
+
+        <RelativeLayout
+            android:id="@+id/tab_font"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/image_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/nq_font_normal" />
+
+                <TextView
+                    android:id="@+id/text_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ellipsize="none"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/nq_store_fonts"
+                    android:textColor="@color/nq_store_tab_text_sel"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_four"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/nq_select_line_two"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

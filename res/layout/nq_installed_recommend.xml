@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="@color/nq_must_install_def"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/installed_icon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:clickable="true"/>
+            
+            <TextView
+                android:id="@+id/installed_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/nq_white"
+                android:textSize="16sp" >
+            </TextView>
+            
+ 			<TextView
+                android:id="@+id/installed_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_marginTop="15dp"
+                android:paddingTop="20dp"
+                android:background="@drawable/nq_install_btn_success"
+                
+                android:text="@string/nq_install_succeed"
+                android:textColor="@color/nq_must_install_def"
+                android:textSize="14sp" >
+            </TextView>
+            
+    </LinearLayout>
+        
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/nq_whitesmoke"
+        android:gravity="center" >
+            
+            <TextView
+                android:id="@+id/recommend_install"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:gravity="center"
+                android:text="@string/nq_recommend_install"
+                android:textColor="@color/nq_must_install_def"
+                android:textSize="22sp" />
+            
+     </LinearLayout>
+     
+    <LinearLayout
+        android:id="@+id/lineOne"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/nq_lighter_gray" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="@color/nq_whitesmoke" >
+
+        <include
+            android:id="@+id/itemOne"
+            layout="@layout/nq_installed_association_layout_item" />
+        
+        <LinearLayout
+        android:layout_width="0.1dp"
+        android:layout_height="match_parent"
+        android:background="@color/nq_lighter_gray" />
+
+        <include
+            android:id="@+id/itemTwo"
+            layout="@layout/nq_installed_association_layout_item" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/lineTwo"        
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/nq_lighter_gray" />
+    
+    <LinearLayout
+        android:id="@+id/ll_install"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nq_whitesmoke"
+        android:gravity="bottom|center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+            <Button
+                android:id="@+id/install_complete"
+                android:layout_width="-1dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/nq_install_btn_complete"
+                android:gravity="center"
+                android:text="@string/nq_install_complete"
+                android:textColor="@color/nq_forestgreen"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/install_open"
+                android:layout_width="-1dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/nq_install_btn_open"
+                android:gravity="center"
+                android:text="@string/nq_install_open"
+                android:textColor="@color/nq_white"
+                android:textSize="15sp" />
+
+    </LinearLayout>
+</LinearLayout>
+
+

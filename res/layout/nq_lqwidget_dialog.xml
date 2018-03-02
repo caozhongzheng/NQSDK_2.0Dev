@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3000000" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:paddingTop="50dp"
+        android:background="@drawable/nq_dialog_rectangle_bg"
+         >
+         
+         <RelativeLayout
+            android:id="@+id/lqw_detail_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="50dp"
+             >
+
+            <ImageView
+                android:id="@+id/lqwidget_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/nq_widget_icon" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/lqwidget_icon"
+                android:layout_alignBottom="@+id/lqwidget_icon"
+                android:layout_toRightOf="@+id/lqwidget_icon"
+                android:gravity="left|center_vertical"
+                >
+
+                <TextView
+                    android:id="@+id/lqwiget_dialog_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:layout_alignParentTop="true"
+                    android:gravity="left"
+                    android:text=""
+                    android:textColor="@color/nq_text_stub"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/lqwiget_dialog_title"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="3dp"
+                    android:ellipsize="end"
+                    android:gravity="left|bottom"
+                    android:text="@string/nq_lqwidget_tip"
+                    android:textColor="@color/nq_text_stub"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/lqw_detail_top"
+             >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/nq_btn_lqwidget_cancle"
+                android:clickable="true"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="@string/nq_lqwidget_cancel"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_download"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/nq_btn_lqwidget_download"
+                android:clickable="true"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="@string/nq_lqwidget_download"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+        
+    </RelativeLayout>
+    
+
+</FrameLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nq_white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nq_navigation_bg"
+        android:gravity="center"
+        android:text="@string/nq_label_mustinstall"
+        android:textColor="@color/nq_white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" 
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/getMoreLayout"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="#aae2e4"
+            android:text="@string/nq_get_more"
+            android:textColor="#0d8d93"
+            android:textSize="16sp"
+            android:visibility="gone"  />
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="#434343" >
+
+            <ImageView
+                android:id="@+id/checkAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp" />
+
+            <Button
+                android:id="@+id/install"
+                android:layout_width="224dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/nq_must_install_def"
+                android:text="@string/nq_label_install"
+                android:textColor="@color/nq_white"
+                android:textSize="16sp" />
+<!--                 android:textColor="#434343" -->
+            <!-- android:background="@drawable/nq_navigation_bg" -->
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- <ExpandableListView -->
+    <ListView
+        android:id="@+id/list"
+        style="@style/nq_listview_no_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/title"
+        android:layout_weight="1.0"
+        android:cacheColorHint="#00000000"
+        android:groupIndicator="@null" />
+
+    <RelativeLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/title"
+        android:orientation="vertical" 
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/install_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/nq_must_install_no" />
+
+        <TextView
+            android:id="@+id/empty_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/install_no"
+            android:layout_marginTop="12.5dp"
+            android:layout_weight="1.0"
+            android:text="@string/nq_no_mustinstall_content"
+            android:textColor="#3c999d"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

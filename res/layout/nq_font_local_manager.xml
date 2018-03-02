@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
+    <FrameLayout 
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/nq_navigation_bg"
+        >
+        
+            
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="@string/nq_label_localfont"
+            android:textColor="@color/nq_white"
+            android:textSize="20sp" />
+        
+      <LinearLayout 
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:orientation="horizontal"
+          android:layout_gravity="center|right"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/font_goto_cloud_button"
+          android:gravity="center"
+          android:id="@+id/more"
+          >
+          <ImageView 
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:src="@drawable/font_cloud"
+              android:layout_marginTop="6dp"
+              android:layout_marginBottom="6dp"
+              android:layout_marginLeft="5dp"
+              />
+           <TextView 
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/nq_label_livefont"
+              android:textColor="#ffffff"
+              android:textSize="16sp"
+              android:layout_marginLeft="5dp"
+              android:layout_marginTop="6dp"
+              android:layout_marginBottom="6dp"
+              android:layout_marginRight="5dp"
+              android:id="@+id/moudle_name_more"
+              />             
+      </LinearLayout>
+    </FrameLayout>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nq_white" >
+            <ListView
+                android:id="@+id/ldFont"
+                style="@style/nq_listview_common"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>

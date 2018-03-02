@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="@dimen/nq_commonui_dialog_width"
+                android:layout_height="@dimen/nq_commonui_dialog_height"
+                android:background="@color/nq_white">
+
+    <RelativeLayout
+            android:id="@+id/lq_commonui_dialog_head"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/nq_commonui_dialog_head_height"
+            android:gravity="center" >
+
+        <TextView
+                android:id="@+id/lq_commonui_dialog_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/lf_commonui_dialog_title_color"
+                android:text="@string/set_defualt_launcher"
+                android:textSize="@dimen/nq_commonui_dialog_head_textSize" />
+    </RelativeLayout>
+
+    <View
+            android:id="@+id/common_dilog_view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/lq_commonui_dialog_head"
+            android:background="#11cad2" />
+
+    <LinearLayout
+            android:id="@+id/common_dialog_content_l"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/common_dilog_view"
+            android:layout_marginBottom="28dip"
+            android:layout_marginTop="@dimen/nq_commonui_dialog_head_content_gap" >
+
+        <TextView
+                android:id="@+id/lq_commonui_dialog_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/lf_commonui_dialog_content_color"
+                android:text="@string/set_default_laucnher_msg"
+                android:textSize="@dimen/nq_commonui_dialog_content_textSize" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:paddingBottom="15dip" >
+
+        <Button
+                android:id="@+id/lf_common_dialog_button_cancel"
+                android:layout_width="@dimen/nq_commonui_dialog_button_width"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lf_commonui_dialog_btn_alpha_cancel"
+                android:text="@string/set_launcher_dialog_reject"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/nq_commonui_dialog_button_textSize" />
+
+        <Button
+                android:id="@+id/lf_common_dialog_button_ok"
+                android:layout_width="@dimen/nq_commonui_dialog_button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:background="@drawable/lf_commonui_dialog_btn_alpha_confirm"
+                android:text="@string/set_launcher_dialog_set_now"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/nq_commonui_dialog_button_textSize" />
+    </LinearLayout>
+
+</RelativeLayout>

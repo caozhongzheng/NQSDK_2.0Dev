@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="26.13dp">
+        
+	    <LinearLayout
+	        android:layout_width="280dp"
+	        android:layout_height="wrap_content"
+	        android:minHeight="210dp"
+	        android:background="@drawable/nq_dialog_rectangle_bg"
+	        android:orientation="vertical" >
+	
+	        <TextView
+	            android:id="@+id/nq_update_dialog_title"
+	            android:layout_width="match_parent"
+	            android:layout_height="32dp"
+	            android:textSize="@dimen/nq_t_16"
+	            android:gravity="center_vertical"
+	            android:textColor="@color/nq_white" 
+	            android:background="@drawable/nq_dialog_title_rectangle_bg"
+	            android:paddingLeft="@dimen/nq_pop_margin" />
+	
+	        <TextView
+	            android:id="@+id/updatedialog_content"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:paddingLeft="@dimen/nq_pop_margin"
+	            android:paddingRight="@dimen/nq_pop_margin"
+	            android:layout_marginTop="13.5dp"
+	            android:textSize="@dimen/nq_t_16"
+	            android:textColor="@color/nq_black" />
+	        
+	       	<TextView
+	       	    android:id="@+id/updatedialog_pleaseupdate"
+	       	    android:layout_width="match_parent"
+	            android:layout_height="32dp"
+	            android:paddingLeft="@dimen/nq_pop_margin"
+	            android:paddingRight="@dimen/nq_pop_margin"
+	            android:layout_marginTop="13.5dp"
+	            android:textSize="@dimen/nq_t_16"
+	            android:text="@string/nq_update_pleaseupdate" 
+	            android:textColor="@color/nq_must_install_def" />
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="30dp" 
+	            android:layout_marginLeft="@dimen/nq_pop_margin" 
+	            android:layout_marginRight="@dimen/nq_pop_margin" 
+	            android:layout_marginTop="5dp"
+	            android:layout_marginBottom="5dp">
+	
+	            <Button
+	               android:id="@+id/no_update"
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_weight="1.0"
+	                android:textSize="@dimen/nq_t_16"
+	                android:textColor="@color/nq_white"
+	                android:background="@drawable/nq_btn_dialog_left"/>
+	
+	            <Button
+	                android:id="@+id/ok_update"
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="17.5dp"
+	                android:layout_weight="1.0"
+	                android:textSize="@dimen/nq_t_16"
+	                android:textColor="@color/nq_white"
+	                android:background="@drawable/nq_btn_dialog_right"/>
+	        </LinearLayout>
+	    </LinearLayout>
+	</LinearLayout>
+
+</FrameLayout>

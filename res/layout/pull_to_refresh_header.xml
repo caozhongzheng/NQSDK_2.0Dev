@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="170.5dp"
+    android:id="@+id/pull_to_refresh_header"
+    android:orientation="vertical"
+    >
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0" />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content">
+        <ProgressBar
+                android:id="@+id/pull_to_refresh_progress"
+                android:indeterminate="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="20dip"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyleSmall"
+                />
+        <ImageView
+                android:id="@+id/pull_to_refresh_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dip"
+                android:src="@drawable/ic_pulltorefresh_arrow"
+                />
+        <TextView
+                android:id="@+id/pull_to_refresh_text"
+                android:text="@string/pull_to_refresh_pull_label"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:paddingTop="5dip"
+                android:layout_gravity="center"
+                android:textColor="@color/nq_text_store_column_title"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        <TextView
+                android:id="@+id/pull_to_refresh_updated_at"
+                android:visibility="gone"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+     </LinearLayout>
+</LinearLayout>

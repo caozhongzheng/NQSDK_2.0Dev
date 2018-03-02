@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="141dp"
+    android:orientation="horizontal" >
+
+    <View
+        android:id="@+id/v_line1"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#d3d3d3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nq_white" >
+
+        <ImageView
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+            android:src="@drawable/nq_point_app_dialog_check" />
+
+        <com.nqmobile.livesdk.commons.ui.AsyncImageView
+            android:id="@+id/icon"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:src="@drawable/nq_icon_default" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:clickable="false"
+            android:singleLine="true"
+            android:textColor="@color/nq_text_store_column_title" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:textColor="@color/nq_point_dialog_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:clickable="false"
+                android:src="@drawable/nq_point_app_dialog_daizi" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

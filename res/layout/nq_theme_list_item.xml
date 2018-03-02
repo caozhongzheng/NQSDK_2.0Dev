@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="7.5dp"
+              android:layout_marginLeft="3.75dp"
+              android:layout_marginRight="3.75dp"
+              android:layout_weight="1.0"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <com.nqmobile.livesdk.commons.ui.AsyncImageView
+                android:id="@+id/iv_preview"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/nq_theme_item_height"
+                android:adjustViewBounds="true"
+                android:maxHeight="@dimen/nq_theme_item_height"
+                android:maxWidth="110dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/nq_load_default"
+                android:src="@drawable/nq_load_default"/>
+
+        <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="110dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/nq_store_theme_name_bg"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/nq_white"
+                android:textSize="14sp"/>
+
+    </RelativeLayout>
+    <TextView
+            android:id="@+id/tv_points"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:visibility="gone"
+            android:textColor="#a1a8a8"
+            android:paddingLeft="5dp"
+            />
+</LinearLayout>

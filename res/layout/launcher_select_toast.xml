@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              android:background="@android:color/white"
+              android:paddingLeft="29.0dip"
+              android:paddingTop="15.0dip"
+              android:paddingRight="22.0dip"
+              android:paddingBottom="15.0dip"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.nqmobile.livesdk.modules.defaultlauncher.TextView
+            android:textSize="16.0sp"
+            android:textColor="#ff444444"
+            android:id="@+id/first_toast_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12.5dip"/>
+    <LinearLayout android:gravity="center_vertical"
+                  android:orientation="horizontal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+        <com.nqmobile.livesdk.modules.defaultlauncher.TextView
+                android:textSize="16.0sp"
+                android:textColor="#ff444444"
+                android:id="@+id/second_toast_front_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <com.nqmobile.livesdk.modules.defaultlauncher.TextView
+                android:textSize="16.0sp"
+                android:textColor="#ff444444"
+                android:gravity="center_vertical"
+                android:id="@+id/second_toast_back_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:drawableLeft="@drawable/nq_live"/>
+    </LinearLayout>
+    <com.nqmobile.livesdk.modules.defaultlauncher.TextView
+            android:textSize="16.0sp"
+            android:textColor="#ff444444"
+            android:id="@+id/third_toast_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.5dip"/>
+</LinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nq_white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/nq_navigation_bg" >
+
+        <ImageView
+                android:id="@+id/icon"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/nq_live"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/icon"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:text="@string/nq_label_livetip"
+            android:textColor="@color/nq_white"
+            android:textSize="20sp" />
+
+        <ImageView
+                android:id="@+id/pointCenter"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/nq_point_center"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nq_white" >
+
+        <LinearLayout
+            android:id="@+id/vpLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bannerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nq_white"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_banner"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_margin="0dp"
+                android:visibility="gone" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_banner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="125dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_banner_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_banner_error"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:background="@color/nq_store_banner_bg"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone" >
+                <ImageView
+                    android:layout_width="53dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/nq_banner_empty" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_banner_loading"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:background="@color/nq_store_banner_bg"
+                android:gravity="center" >
+
+                <ProgressBar
+                    android:id="@+id/pb_loading"
+                    style="@android:style/Widget.ProgressBar.Small"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" >
+                </ProgressBar>
+
+                <TextView
+                    android:id="@+id/tv_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/nq_loading"
+                    android:textColor="@color/nq_black"
+                    android:textSize="14sp" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="top|center_horizontal"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_column"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:background="@color/nq_fragment_title_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="0dp" >
+
+                    <TextView
+                        android:id="@+id/tv_column_top_games"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/nq_store_top_games"
+                        android:textColor="@color/nq_text_store_column_title"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_column_top_apps"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/nq_store_top_apps"
+                        android:textColor="@color/nq_text_store_column_title"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <include layout="@layout/nq_fragment_tvcursor"/>
+                <!-- <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/nq_fragment_cursor"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="0dp" >
+
+                    <ImageView
+                        android:id="@+id/tv_cursor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/nq_column_line"
+                        android:contentDescription = "@null" />
+                </LinearLayout> -->
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

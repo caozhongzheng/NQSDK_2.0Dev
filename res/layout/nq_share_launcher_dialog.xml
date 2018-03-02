@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/nq_spring_share_bg"  >      
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity = "bottom"
+        android:layout_marginBottom="50dp">
+
+        <ImageView
+            android:id="@+id/image_shareToWX"
+            android:layout_width="80dp"
+            android:layout_height="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/nq_spring_share_wx" />
+
+        <ImageView
+            android:id="@+id/image_shareToQQ"
+            android:layout_width="80dp"
+            android:layout_height="110dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"            
+            android:background="@drawable/nq_spring_share_qq" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/nq_white"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:textColor="@color/nq_white"
+            android:layout_width="match_parent"
+            android:text="@string/nq_label_downloadmanager"
+            android:textSize="18sp"
+            android:background="@drawable/nq_navigation_bg"
+            android:gravity="center"
+            android:layout_height="48dp"/>
+
+    <ExpandableListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:childDivider="#929292"
+            android:layout_height="wrap_content">
+    </ExpandableListView>
+
+    <TextView
+            android:id="@+id/empty_tv"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:textSize="20sp"
+            android:text="@string/nq_no_data"/>
+</LinearLayout>

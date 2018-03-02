@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/nq_white"
+	android:gravity="top"
+	android:orientation="vertical" >
+
+	<include
+		android:layout_width="fill_parent"
+		android:layout_height="48dp"
+		layout="@layout/nq_custom_title" >
+	</include>
+
+	<LinearLayout
+		android:id="@+id/ll_content"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:gravity="top"
+		android:orientation="vertical" >
+
+		<com.nqmobile.livesdk.commons.ui.MyScrollView
+			android:id="@+id/sv_app"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+
+			<LinearLayout
+				android:id="@+id/ll_app"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="top"
+				android:orientation="vertical" >
+
+				<LinearLayout
+					android:id="@+id/ll_app_outline"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="left|center_vertical" >
+
+					<com.nqmobile.livesdk.commons.ui.AsyncImageView
+					    android:id="@+id/iv_icon"
+					    android:layout_width="58dp"
+					    android:layout_height="58dp"
+					    android:layout_marginBottom="10dp"
+					    android:layout_marginLeft="14dp"
+					    android:layout_marginRight="14dp"
+					    android:layout_marginTop="10dp"
+					    android:scaleType="fitXY"
+					    android:src="@drawable/nq_icon_default" />
+
+					<LinearLayout
+					    android:layout_width="0dp"
+					    android:layout_height="78dp"
+					    android:layout_weight="1"
+					    android:gravity="left|center_vertical"
+					    android:orientation="vertical" >
+						
+						<RatingBar
+							android:id="@+id/rb_rate"
+							style="@style/nq_ratingbar"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginBottom="4dp"
+							android:layout_marginLeft="0dp"
+							android:gravity="center"
+							android:isIndicator="true"
+							android:numStars="5"
+							android:stepSize = "0.1"
+							android:padding="0dp" />
+						
+						<TextView
+							android:id="@+id/tv_version"
+							style="@style/ellipsize_end"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="4dp"
+							android:includeFontPadding="false"
+							android:text="@string/nq_detail_version"
+							android:textColor="@color/nq_text_store_detail_outline"
+							android:textSize="12sp" />
+					</LinearLayout>
+
+					<LinearLayout
+					    android:layout_width="0dp"
+					    android:layout_height="78dp"
+					    android:layout_weight="1"
+					    android:gravity="left|center_vertical"
+					    android:orientation="vertical"
+					    android:paddingLeft="2dp" >
+						
+					    <TextView
+							android:id="@+id/tv_category"
+							style="@style/ellipsize_end"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginBottom="4dp"
+							android:layout_marginLeft="0dp"
+							android:includeFontPadding="false"
+							android:text="@string/nq_detail_category"
+							android:textColor="@color/nq_text_store_detail_outline"
+							android:textSize="12sp" />
+
+						<TextView
+							android:id="@+id/tv_updatetime"
+							style="@style/ellipsize_end"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="4dp"
+							android:includeFontPadding="false"
+							android:text="@string/nq_detail_updatetime"
+							android:textColor="@color/nq_text_store_detail_outline"
+							android:textSize="12sp" />
+					</LinearLayout>
+				</LinearLayout>
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:scaleType="fitXY"
+					android:src="@drawable/nq_store_app_detail_line" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="37dp"
+					android:gravity="left|center_vertical"
+					android:paddingLeft="14dp"
+					android:text="@string/nq_app_detail"
+					android:textColor="@color/nq_text_store_detail_title"
+					android:textSize="15sp" />
+
+
+					<LinearLayout
+						android:id="@+id/ll_app_preview"
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/nq_theme_virepage_item_height"
+						android:layout_margin="0dp"
+						android:gravity="top|center_horizontal"
+						android:orientation="horizontal"
+						android:paddingLeft="15dp"
+						android:paddingRight="15dp"
+		        		android:clipChildren="false"
+		        		android:layerType="software"  >
+
+						<android.support.v4.view.ViewPager
+				            android:id="@+id/view_pager"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+                            android:minHeight="@dimen/nq_theme_virepage_item_height"
+				            android:layout_gravity="center"
+				            android:layout_marginLeft="@dimen/nq_app_detail_pager_margin"
+				            android:layout_marginRight="@dimen/nq_app_detail_pager_margin"
+				            android:clipChildren="false" />
+						
+					</LinearLayout>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="37dp"
+					android:gravity="left|center_vertical"
+					android:paddingLeft="14dp"
+					android:text="@string/nq_app_description"
+					android:textColor="@color/nq_text_store_detail_title"
+					android:textSize="15sp" />
+
+				<LinearLayout
+					android:id="@+id/rl_app_detail"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="left|center_vertical"
+					android:orientation="vertical"
+					android:paddingBottom="14dp"
+					android:paddingLeft="14dp"
+					android:paddingRight="14dp" >
+
+					<TextView
+						android:id="@+id/tv_summary"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="2dp"
+						android:text=""
+						android:textColor="@color/nq_text_store_detail_outline"
+						android:textSize="12sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</com.nqmobile.livesdk.commons.ui.MyScrollView>
+		<include
+            layout="@layout/nq_app_detail_footer" >
+        </include>
+	</LinearLayout>
+
+</LinearLayout>

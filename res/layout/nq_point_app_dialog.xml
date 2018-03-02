@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="403dp"
+    android:background="@color/nq_white"
+    android:orientation="vertical" >
+
+    <!-- android:layout_height="383dp" -->
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nq_navigation_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/nq_consume_point_theme"
+            android:textColor="@color/nq_white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/less_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/nq_less_point"
+            android:textColor="@color/nq_white"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/getpoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nq_point_dialog_getpoint_bg"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/nq_label_sel_app_point"
+            android:textColor="@color/nq_point_dialog_color"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#dadada"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/btn_enterPointCenter"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/nq_point_dialog_but_left"
+                android:text="@string/nq_enter_point_center"
+                android:textColor="@color/nq_text_store_column_title"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_installAll"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/nq_point_dialog_but_right"
+                android:text="@string/nq_label_install"
+                android:textColor="@color/nq_white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.0" />
+
+        <TextView
+            android:id="@+id/empty_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/nq_no_point_app"
+            android:visibility="gone" />
+    </LinearLayout>
+    
+    <ListView
+        android:id="@+id/list"
+        style="@style/nq_listview_common"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top"
+        android:layout_weight="1.0"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_load_failed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_nonetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/nq_no_network"
+            android:contentDescription="@null"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/iv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nq_no_network"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:singleLine="true"
+            android:text="@string/nq_tap_load"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>

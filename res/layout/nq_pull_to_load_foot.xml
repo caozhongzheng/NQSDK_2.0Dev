@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="36.5dp"
+    android:background="@color/nq_list_loading_color" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+    	android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="?android:attr/progressBarStyleSmall"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/loadmore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="@string/nq_loading2"
+            android:textColor="@color/nq_black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

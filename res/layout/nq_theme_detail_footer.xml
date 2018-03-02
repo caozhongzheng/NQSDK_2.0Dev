@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nqmobile.livesdk.modules.theme.ThemeDetailFooter xmlns:android="http://schemas.android.com/apk/res/android"
+                                              android:id="@+id/rl_footer"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="54dp"
+                                              android:background="@drawable/nq_store_detail_download_bg"
+                                              android:gravity="center"
+                                              android:orientation="vertical"
+                                              android:paddingBottom="10dp"
+                                              android:paddingTop="10dp">
+
+    <ImageButton
+            android:id="@+id/ib_download"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="0dp"
+            android:background="@drawable/nq_store_detail_download_sel"
+            android:padding="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/nq_store_detail_download_x"/>
+
+    <ProgressBar
+            android:id="@+id/pb_progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:max="100"
+            android:indeterminate="false"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/nq_detail_footer_progress_layer"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/download_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nq_theme_detail_sel"
+                android:layout_marginRight="5dp"
+               />
+
+        <TextView
+                android:id="@+id/tv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="@string/nq_label_download"
+                android:textColor="@color/nq_white"
+                android:textSize="16sp"/>
+    </LinearLayout>
+
+</com.nqmobile.livesdk.modules.theme.ThemeDetailFooter>

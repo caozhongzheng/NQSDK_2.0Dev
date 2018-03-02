@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="nq_theme_item_width">106.666dp</dimen>
+    <dimen name="nq_theme_item_height">188.444dp</dimen>
+    <dimen name="nq_theme_virepage_item_height">426.666dp</dimen>
+    <dimen name="nq_detail_preview_height">374dp</dimen>
+    <dimen name="nq_download_progress_width">190dp</dimen>
+    <dimen name="nq_download_name_width">150dp</dimen>    
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nq_white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        layout="@layout/nq_custom_title" >
+    </include>
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_wallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxWidth="170dp"
+                    android:text="@string/nq_detail_author"
+                    android:textColor="@color/nq_text_store_detail_item"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/nq_detail_source"
+                    android:textColor="@color/nq_text_store_detail_item"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_download_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/nq_detail_download_count"
+                    android:textColor="@color/nq_text_store_detail_item"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_wallpaper_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical" 
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" 
+		        android:clipChildren="false"
+		        android:layerType="software"  >
+
+                <!-- <LinearLayout
+                    android:id="@+id/ll_wallpaper_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" > -->
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/nq_theme_virepage_item_height"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/nq_app_detail_pager_margin"
+                        android:layout_marginRight="@dimen/nq_app_detail_pager_margin"
+                        android:clipChildren="false" />
+               <!--  </LinearLayout> -->
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include layout="@layout/nq_wallpaper_detail_footer" >
+        </include>
+    </LinearLayout>
+
+</LinearLayout>

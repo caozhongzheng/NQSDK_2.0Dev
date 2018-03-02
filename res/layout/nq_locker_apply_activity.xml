@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nq_dialog_white_bg"
+    android:padding="18dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/nq_locker_applying"
+        android:textColor="@color/nq_engine_intro"
+        android:textSize="14sp" />
+
+</RelativeLayout>

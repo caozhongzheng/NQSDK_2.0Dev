@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_weight="1.0"
+    android:gravity="center"
+    android:orientation="vertical" >
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"  >
+        <com.nqmobile.livesdk.commons.ui.AsyncImageView
+            android:id="@+id/icon"
+            android:layout_width="58dp"
+            android:layout_height="58dp" 
+		    android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/checkState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:clickable="false"
+            android:focusable="false" />
+        <com.nqmobile.livesdk.commons.ui.DownloadStateView
+            android:id="@+id/download_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"  >
+            <ImageView
+                android:id="@+id/downState"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:visibility="visible"  
+                android:background="@drawable/nq_must_mask_rectang"/>
+            <com.nqmobile.livesdk.commons.ui.CircleProgressDownloadView
+                android:id="@+id/progressView"
+                android:layout_width="48dp"
+                android:layout_height="48dp" 
+		    	android:layout_gravity="center"/>
+        </com.nqmobile.livesdk.commons.ui.DownloadStateView>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="#212121"
+        android:textSize="12sp" />
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="300dp"
+              android:background="@color/nq_white"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#14aeb5">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/nq_white"
+                android:text="@string/nq_delete_download"/>
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/nq_black"
+            android:text="@string/nq_confirm_cancle_msg"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:background="#e7e7e7"
+                android:layout_height="48dp"
+                android:textColor="#888888"
+                android:text="@string/nq_label_cancel"/>
+        <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#888888" />
+
+        <Button
+                android:id="@+id/ok"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:background="#e7e7e7"
+                android:textColor="#14aeb5"
+                android:layout_height="48dp"
+                android:text="@string/nq_label_delete"/>
+    </LinearLayout>
+
+</LinearLayout>

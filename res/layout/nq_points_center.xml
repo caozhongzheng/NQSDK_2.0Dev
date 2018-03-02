@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/nq_white"
+              android:layout_height="match_parent">
+    <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/nq_navigation_bg" >
+
+        <ImageButton
+                android:id="@+id/iv_back"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/nq_store_title_back_sel"
+                android:scaleType="center"
+                android:background="@color/nq_transparent"
+                android:visibility="visible"
+                android:contentDescription="@null" />
+
+        <ImageView
+                android:id="@+id/icon"
+                android:layout_toRightOf="@id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/nq_point_center_icon"
+                android:layout_height="wrap_content"/>
+
+        <View
+                android:id="@+id/line"
+                android:layout_toRightOf="@id/icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nq_navigation_bar_line"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/line"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/nq_label_pointcenter"
+                android:textColor="@color/nq_white"
+                android:textSize="20sp"/>
+
+
+        <ImageView
+                android:id="@+id/consume_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="6.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/nq_consume_list_sel"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+        <LinearLayout
+                android:id="@+id/point_layout"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/points"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/nq_text_store_column_title_selected"
+                    android:layout_gravity="left"
+                    android:text="@string/nq_current_points"/>
+            <ImageView
+                    android:id="@+id/expend"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:clickable="false"
+                    android:src="@drawable/nq_expend_one"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/points_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="visible"
+                android:orientation="vertical">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/nq_text_store_column_title"
+                    android:text="@string/nq_points_recommend"/>
+            <TextView
+                    android:id="@+id/experiod_points"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="19dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/nq_tanhao"
+                    android:textColor="@color/nq_text_store_column_title"
+                    android:text="@string/nq_ex_points_tv"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="top|center_horizontal"
+            android:orientation="vertical" >
+
+        <LinearLayout
+                android:id="@+id/ll_column"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:background="@color/nq_fragment_title_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp" >
+
+            <TextView
+                    android:id="@+id/tv_points_app"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/nq_store_get_more_points"
+                    android:textColor="@color/nq_text_store_column_title_selected"
+                    android:textSize="15sp" />
+
+            <TextView
+                    android:id="@+id/tv_points_theme"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/nq_store_points_theme"
+                    android:textColor="@color/nq_text_store_column_title"
+                    android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/nq_fragment_cursor"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="0dp" >
+
+            <ImageView
+                    android:id="@+id/tv_cursor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/nq_column_line" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/vpLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:orientation="vertical" >
+
+        <android.support.v4.view.ViewPager
+                android:id="@+id/vp_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

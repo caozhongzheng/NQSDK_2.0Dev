@@ -1,0 +1,124 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="nq_rg_btn_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:gravity">top|center_horizontal</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/nq_store_tab_text_color_x</item>
+        <item name="android:background">@drawable/nq_store_tab_bg_x</item>
+    </style>
+    
+	<!-- 通用列表 -->
+	<style name="nq_listview_common">
+		<item name="android:divider">@drawable/nq_listview_divider_line</item>
+		<item name="android:cacheColorHint">#00000000</item>
+		<item name="android:fadingEdge">none</item>
+		<item name="android:scrollingCache">false</item>
+		<item name="android:listSelector">@android:color/transparent</item>
+	</style>
+	
+	<!-- 通用列表 -->
+	<style name="nq_listview_no_divider" parent="nq_listview_common">
+		<item name="android:divider">#00000000</item>
+	</style>
+	   
+	<!-- 主题、壁纸列表 -->
+	<style name="nq_listview_no_line">
+		<item name="android:cacheColorHint">#00000000</item>
+		<item name="android:fadingEdge">none</item>
+		<item name="android:scrollingCache">false</item>
+		<item name="android:listSelector">@android:color/transparent</item>
+	</style> 
+    
+    <style name="nq_custom_title_text">
+        <item name="android:layout_height">48dip</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/nq_white</item>
+    </style>
+    
+    <!-- 对文字超长部分的显示要求 -->
+	<style name="ellipsize_end">
+		<item name="android:singleLine">true</item>
+		<item name="android:max">1</item>
+		<item name="android:ellipsize">end</item>
+	</style>
+	
+	<style name="nq_ratingbar"  parent="@android:style/Widget.RatingBar"> 
+		<item name="android:progressDrawable">@drawable/nq_ratingbar</item> 
+		<item name="android:minHeight">13dip</item>
+		<item name="android:maxHeight">13dip</item>
+	</style> 
+	
+	<style name="nq_game_ratingbar"  parent="@android:style/Widget.RatingBar"> 
+		<item name="android:progressDrawable">@drawable/nq_game_ratingbar</item> 
+		<item name="android:minHeight">10.6dip</item>
+		<item name="android:maxHeight">10.6dip</item>
+	</style> 
+	
+	<style name="nq_stub_ratingbar"  parent="@android:style/Widget.RatingBar"> 
+		<item name="android:progressDrawable">@drawable/nq_stub_ratingbar</item> 
+		<item name="android:minHeight">13dip</item>
+		<item name="android:maxHeight">13dip</item>
+	</style> 
+	
+	<style name="activityLaunchTheme" parent="@android:style/Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    
+	<style name="activityLaunchFont" parent="@android:style/Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+	<!-- 应用,主题预览图 -->
+	<style name="nq_store_detail_image">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">@dimen/nq_theme_virepage_item_height</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:gravity">center</item>
+		<item name="android:padding">0dp</item>
+		<item name="android:layout_marginLeft">5dp</item>
+		<item name="android:layout_marginRight">0dp</item>
+		<item name="android:visibility">visible</item>
+		<item name="android:background">@color/nq_white</item>
+	</style>
+	
+    <style name="translucent" parent="@android:style/Theme.Translucent">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="Translucent_NoTitle" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item> <!-- 设置自定义布局的背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>  <!-- 设置window背景透明，也就是去边框 -->
+    </style>
+    
+	<style name="nq_wrap_18">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">@dimen/nq_t_18</item>
+		<item name="android:textColor">@color/nq_black</item>
+	</style>
+	<style name="nq_wrap_20">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">@dimen/nq_t_20</item>
+		<item name="android:textColor">@color/nq_black</item>
+	</style>
+
+	<style name="ResolverActivityTheme" parent="@android:style/Theme.Wallpaper">
+		<item name="android:windowNoTitle">true</item>
+	</style>
+
+	<style name="HideDialog" parent="@android:style/Theme.Dialog">
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+</resources>

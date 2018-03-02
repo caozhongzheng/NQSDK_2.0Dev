@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="30dp"
+    android:background="@drawable/nq_stub_bg"
+    android:paddingBottom="25dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="30dp" >
+
+    <TextView
+        android:id="@+id/tv_flow_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:drawableLeft="@drawable/nq_flow_noti"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/nq_stub_flow_noti"
+        android:textColor="@color/nq_text_stub"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_flow_header"
+        android:layout_marginBottom="12dp"
+        android:gravity="left" >
+
+        <ImageView
+            android:id="@+id/v_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/nq_stub_line" />
+
+        <TextView
+            android:id="@+id/tv_detail_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v_line1"
+            android:layout_marginBottom="6dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:text="@string/nq_stub_detail"
+            android:textColor="@color/nq_text_stub"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_detail_header"
+            android:layout_marginBottom="6dp"
+            android:ellipsize="end"
+            android:gravity="fill_horizontal|left"
+            android:maxLines="1"
+            android:textColor="@color/nq_text_stub"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/v_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_detail"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/nq_stub_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_line2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="125dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/nq_stub_btn_cancel"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="@string/nq_label_cancel"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_download"
+            android:layout_width="125dp"
+            android:layout_height="48dp"
+            android:layout_alignTop="@+id/btn_cancel"
+            android:layout_toRightOf="@+id/btn_cancel"
+            android:background="@drawable/nq_stub_btn_download"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="@string/nq_label_download"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="275dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/nq_app_rate_dialog_bg_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:text="@string/nq_app_rate_dialog_title"
+                android:textColor="#636363"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="18dp"
+            android:contentDescription="@null"
+            android:src="@drawable/nq_app_rate_top_logo" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/nq_app_rate_dialog_bg_bottom"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/nq_app_rate_dialog_rate_btn"
+            android:layout_width="201dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/nq_app_rate_rate_btn"
+            android:clickable="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/nq_app_rate_star" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/nq_app_rate_star" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/nq_app_rate_star" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/nq_app_rate_star" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/nq_app_rate_star" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/nq_app_rate_dialog_rate_btn"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nq_app_rate_dialog_feedback_btn"
+            android:layout_width="201dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:background="@drawable/nq_app_rate_feedback_btn"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nq_app_rate_dialog_feedback_btn"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/nq_app_rate_dialog_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" >
+    </FrameLayout>
+
+</LinearLayout>

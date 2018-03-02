@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_full_holo_light"
+    android:padding="18dp" >
+
+    <LinearLayout
+        android:id="@+id/ll_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <com.nqmobile.livesdk.commons.ui.AsyncImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:background="@drawable/nq_icon_default"
+            android:scaleType="fitXY"
+            android:src="@drawable/nq_icon_default" />
+
+        <RatingBar
+            android:id="@+id/rb_rate"
+            style="@style/nq_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:focusable="false"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:padding="0dp"
+            android:stepSize="0.1" />
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:maxHeight="13dp"
+            android:maxLines="1"
+            android:minHeight="13dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ll_icon"
+        android:layout_toRightOf="@+id/ll_icon"
+        android:gravity="left" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#191919"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/nq_update_normal" />
+
+        <TextView
+            android:id="@+id/tv_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v_line"
+            android:layout_marginBottom="6dp"
+            android:ellipsize="end"
+            android:gravity="fill_horizontal|left"
+            android:maxLines="4"
+            android:minLines="2"
+            android:textColor="@color/nq_game_intro"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_download"
+            android:layout_width="88dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_intro"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/nq_game_install"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="@string/nq_install"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_change"
+            android:layout_width="88dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/btn_download"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/nq_game_change"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="@string/nq_game_next"
+            android:textColor="#88000000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

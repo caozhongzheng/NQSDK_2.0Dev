@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nq_white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/nq_navigation_bg" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/nq_live" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/icon"
+            android:layout_marginLeft="10dp"
+            android:text="@string/nq_label_topic"
+            android:textColor="@color/nq_white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/pointCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/btn_local"
+            android:src="@drawable/nq_point_center" 
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/btn_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="6.0dip"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6.0dip"
+            android:src="@drawable/nq_store_local"  
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <!-- <PullToRefreshListView
+        android:id="@+id/vp_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /> -->
+    <!-- <include layout="@layout/nq_theme_list"/> -->
+    
+	<com.nqmobile.livesdk.commons.ui.PullToRefreshListView
+            android:id="@+id/lv_list"
+            style="@style/nq_listview_no_divider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nq_commonui_dialog_head_textSize">16sp</dimen>
+    <dimen name="nq_commonui_dialog_content_textSize">12sp</dimen>
+    <dimen name="nq_commonui_dialog_button_textSize">12sp</dimen>
+    <dimen name="nq_commonui_dialog_width">265dp</dimen>
+    <dimen name="nq_commonui_dialog_height">172dp</dimen>
+    <dimen name="nq_commonui_dialog_head_height">45dp</dimen>
+    <dimen name="nq_commonui_dialog_head_content_gap">20dip</dimen>
+    <dimen name="nq_commonui_dialog_button_width">102.5dp</dimen>
+</resources>
